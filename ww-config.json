@@ -1,0 +1,117 @@
+{
+    "componentPath": "./src/wwObject.vue",
+    "type": "wwObject",
+    "options": {
+        "sizable": true,
+        "lazyHydrate": true
+    },
+    "editor": {
+        "label": {
+            "fr": "Image",
+            "en": "Image"
+        },
+        "menuOptions": {
+            "quick": {
+                "sections": ["resize", "url", "setRatio", "alt"],
+                "bind": [
+                    { "prop": "url", "label": { "en": "Bind image source" } },
+                    { "prop": "alt", "label": { "en": "Bind image alt" } }
+                ]
+            }
+        },
+        "styleOptions": {
+            "url": {
+                "label": { "en": "Image", "fr": "Image" },
+                "type": "Image",
+                "bindable": true
+            },
+            "setRatio": {
+                "type": "Button",
+                "options": {
+                    "text": { "en": "Set same ratio as image", "fr": "Même ratio que l'image" },
+                    "color": "blue",
+                    "action": "setRatio"
+                }
+            },
+            "zoom": {
+                "type": "Number",
+                "label": { "en": "Zoom", "fr": "Zoom" },
+                "options": {
+                    "min": 0.01,
+                    "max": 5,
+                    "step": 0.01
+                }
+            },
+            "x": {
+                "type": "Number",
+                "label": { "en": "Position X", "fr": "Position X" },
+                "options": {
+                    "min": -100,
+                    "max": 100
+                }
+            },
+            "y": {
+                "type": "Number",
+                "label": { "en": "Position Y", "fr": "Position Y" },
+                "options": {
+                    "min": -100,
+                    "max": 100
+                }
+            },
+            "reset": {
+                "type": "Button",
+                "options": {
+                    "text": { "en": "Reset zoom & pos.", "fr": "Réinit. zoom & pos." },
+                    "color": "blue",
+                    "action": "resetZoom"
+                }
+            },
+            "coverContain": {
+                "type": "Button",
+                "options": {
+                    "text": { "en": "Switch Cover / Contain", "fr": "Zoom auto" },
+                    "color": "blue",
+                    "action": "switchCoverContain"
+                }
+            },
+            "overlay": {
+                "type": "Color",
+                "path": "style.overlay",
+                "label": { "en": "Overlay", "fr": "Overlay" },
+                "options": {
+                    "nullable": true,
+                    "gradient": true
+                }
+            },
+            "filter": {
+                "type": "CssFilter",
+                "path": "style.filter",
+                "label": { "en": "Filters", "fr": "Filtres" }
+            }
+        },
+        "settingsOptions": {
+            "alt": {
+                "label": { "en": "Alt", "fr": "Alt" },
+                "type": "Text",
+                "multiLang": true,
+                "bindable": true,
+                "options": {
+                    "placeholder": "Image description"
+                }
+            }
+        },
+        "otherOptions": {
+            "resize": {
+                "type": "Info",
+                "options": {
+                    "text": {
+                        "en": "Double click on the image to resize",
+                        "fr": "Double clic sur l'image pour la redimensionner"
+                    },
+                    "align": "center",
+                    "size": "medium"
+                }
+            }
+        }
+    }
+}
