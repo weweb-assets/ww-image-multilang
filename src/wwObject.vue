@@ -104,10 +104,10 @@ export default {
             return `image:${wwLib.wwUtils.getTwicPicsFolder()}${this.url}`;
         },
         screenSize() {
-            return this.$store.getters['front/getScreenSize'];
+            return wwLib.getCurrentBreakpoint();
         },
         screenSizes() {
-            return this.$store.getters['front/getScreenSizes'];
+            return wwLib.getBreakpoints();
         },
         imageStyle() {
             let style = {
