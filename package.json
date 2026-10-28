@@ -5,6 +5,7 @@
         "url": "https://github.com/weweb-assets/ww-image"
     },
     "version": "3.0.0",
+    "weweb": { "componentPath": "./src/wwObject.vue" },
     "license": "MIT",
     "scripts": {
         "build": "weweb build",
